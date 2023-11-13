@@ -1,0 +1,115 @@
+.card-headline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-headline-1 {
+  grid-area: headline1;
+}
+
+.card-headline-2 {
+  grid-area: headline2;
+}
+
+/* Bespoke Card Styles */
+
+.card-icon {
+  display: grid;
+  place-items: center;
+  height: var(--length-lg2);
+  width: var(--length-lg2);
+  color: var(--color-primary);
+  font-size: var(--length-lg1);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.card-list {
+  grid-area: list;
+  display: flex;
+  gap: var(--length-md3);
+}
+
+.card-list-item {
+  display: flex;
+  gap: var(--length-sm2);
+  align-items: center;
+}
+
+.card-list-badge {
+  width: var(--length-sm3);
+  height: var(--length-sm3);
+  border-radius: 50%;
+  background: var(--color-primary);
+}
+
+.card-list-badge.accent {
+  background-color: var(--color-accent);
+}
+
+.card-list-badge.default {
+  background-color: var(--color-default);
+}
+
+.card-list-badge.primary {
+  background-color: var(--color-primary);
+}
+
+/* Card Progress */
+
+.card-progress {
+  grid-area: engagement;
+  text-align: center;
+}
+
+.card-progress-donut {
+  position: relative;
+  width: var(--length-xl2);
+  height: var(--length-xl2);
+  margin: 0 auto;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--color-primary) 0% 33%,
+    var(--color-default) 33% 100%
+  );
+}
+
+.card-progress-donut::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  height: 85%;
+  border-radius: inherit;
+  background: var(--color-card);
+}
+
+/* Growth card */
+
+.card-growth {
+  grid-area: growth;
+  text-align: center;
+}
+
+.card-growth-headlines {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Region card */
+.card-regions {
+  grid-area: region;
+  padding: var(--length-md1) var(--length-md3);
+  text-align: center;
+}
+
+.card-authors {
+  grid-area: authors;
+}
+
+.card-activity {
+  grid-area: activity;
+}
